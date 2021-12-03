@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.navBox {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+  column-gap: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 6px 4px -4px #9e9e9e;
+}
