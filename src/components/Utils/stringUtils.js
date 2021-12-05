@@ -23,9 +23,8 @@ export const convertTimeStamptoDate = (date = "") => {
         hour12: true,
       })
     )
-  } else {
-    return "---"
   }
+  return "---"
 }
 
 export const createUser = (user) => {
@@ -39,8 +38,8 @@ export const createUser = (user) => {
     city: user.city || "",
     state: user.state || "",
     zip: user.zip || "",
-    phone: user.phone || "",
-    createdAt: user.createdAt || "",
-    lastLoggedIn: user.lastLoggedIn || "",
+    phone: convertPhoneUS(user.phone),
+    createdAt: convertTimeStamptoDate(user.createdAt),
+    lastLoggedIn: convertTimeStamptoDate(user.lastLoggedIn),
   }
 }
