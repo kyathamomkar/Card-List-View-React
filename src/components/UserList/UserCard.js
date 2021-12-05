@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { Text } from "../DomElements"
-import { convertPhoneUS, convertTimeStamptoDate } from "../Utils/stringUtils"
 import { UserIcon, ExpandMoreIcon, ExpandLessIcon } from "../Icons"
 
 const roleIconColor = {
@@ -41,13 +40,9 @@ export const UserCard = ({ user }) => {
               ` ` +
               user.zip}
           </Text>
-          <Text label="Phone">{convertPhoneUS(user.phone)}</Text>
-          <Text label="Created At">
-            {convertTimeStamptoDate(user.createdAt)}
-          </Text>
-          <Text label="Last Logged In">
-            {convertTimeStamptoDate(user.lastLoggedIn)}
-          </Text>
+          <Text label="Phone">{user.phone}</Text>
+          <Text label="Created At">{user.createdAt}</Text>
+          <Text label="Last Logged In">{user.lastLoggedIn}</Text>
         </span>
       </div>
     </div>
